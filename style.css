@@ -1,0 +1,104 @@
+:root {
+  --blue: #0284c7;
+  --ink: #111827;
+  --body: #475569;
+  --muted: #64748b;
+  --bg: #f8fafc;
+  --line: #e2e8f0;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--bg);
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", Meiryo, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+a:focus-visible { outline: 3px solid var(--blue); outline-offset: 4px; }
+.container { width: min(1120px, calc(100% - 64px)); margin: auto; }
+
+.site-header { background: rgba(248, 250, 252, .94); border-bottom: 1px solid var(--line); }
+.header-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 84px; }
+.brand { display: flex; align-items: center; gap: 10px; font-size: 21px; font-weight: 750; letter-spacing: -.05em; }
+.brand img { display: block; }
+.site-header nav { display: flex; gap: 30px; }
+.site-header nav a { color: var(--muted); font-size: 13px; transition: color .2s; }
+.site-header nav a:hover, .social a:hover { color: var(--blue); }
+
+.hero { display: grid; grid-template-columns: 1.13fr .87fr; align-items: center; gap: 35px; min-height: 640px; padding-top: 90px; padding-bottom: 100px; }
+.eyebrow { margin: 0 0 24px; color: var(--blue); font-size: 12px; font-weight: 750; letter-spacing: .13em; }
+.hero h1 { margin: 0 0 30px; font-size: clamp(35px, 4.3vw, 58px); font-weight: 750; letter-spacing: -.055em; line-height: 1.43; }
+.hero h1 span { white-space: nowrap; }
+.lead { margin: 0 0 15px; font-size: 21px; font-weight: 650; line-height: 1.9; }
+.hero-detail { max-width: 540px; margin: 0 0 32px; color: var(--body); font-size: 15px; line-height: 2.1; }
+.primary-link { display: inline-flex; align-items: center; gap: 26px; padding: 16px 22px; border-radius: 999px; color: white; background: var(--blue); font-size: 13px; font-weight: 650; }
+.primary-link:hover { background: #0369a1; }
+.hero-art svg { display: block; width: 100%; filter: drop-shadow(0 18px 40px rgba(2, 132, 199, .07)); }
+
+.section { padding: 112px 0; scroll-margin-top: 20px; }
+.section-white { background: white; }
+.section-grid, .philosophy-followup { display: grid; grid-template-columns: 1fr 1fr; gap: 90px; }
+.section h2 { margin: 0 0 44px; font-size: clamp(30px, 3.2vw, 44px); letter-spacing: -.055em; line-height: 1.55; }
+.section-grid h2 { margin-bottom: 0; }
+.section-body { padding-top: 36px; }
+.section-body p, .about-intro, .founder p { margin: 0 0 24px; color: var(--body); font-size: 16px; line-height: 2.15; }
+.section-body p:last-child { margin-bottom: 0; }
+.section-body strong { color: var(--ink); font-weight: 750; }
+.philosophy-followup { margin-top: 82px; padding-top: 72px; border-top: 1px solid var(--line); }
+.philosophy-followup h3 { margin: 0; font-size: clamp(25px, 2.7vw, 36px); letter-spacing: -.055em; line-height: 1.55; }
+.philosophy-followup .section-body { padding-top: 0; }
+
+.product-card { display: flex; align-items: flex-start; gap: 34px; max-width: 860px; padding: 40px; border: 1px solid var(--line); border-radius: 20px; background: white; box-shadow: 0 15px 50px rgba(15, 23, 42, .025); }
+.product-icon { display: grid; flex: 0 0 92px; width: 92px; height: 92px; place-items: center; border-radius: 22px; color: var(--blue); background: #e0f2fe; font-size: 56px; font-weight: 700; letter-spacing: -.08em; }
+.product-heading { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; }
+.product-heading h3 { margin: 0; font-size: 27px; letter-spacing: -.04em; }
+.status { padding: 8px 11px; border-radius: 99px; color: #0369a1; background: #e0f2fe; font-size: 10px; font-weight: 750; letter-spacing: .1em; }
+.product-tagline { margin: 14px 0 !important; color: var(--ink) !important; font-size: 18px; font-weight: 650; }
+.product-copy > p:last-child { margin: 0; color: var(--body); font-size: 15px; line-height: 2; }
+
+.about-intro { max-width: 780px; }
+.founder { display: grid; grid-template-columns: 180px 1fr; gap: 35px; max-width: 850px; margin-top: 46px; padding-top: 34px; border-top: 1px solid var(--line); }
+.founder-label { padding-top: 8px; color: var(--blue); font-size: 12px; font-weight: 750; letter-spacing: .12em; }
+.founder h3 { margin: 0 0 15px; font-size: 23px; }
+.social { display: flex; gap: 24px; }
+.social a { color: var(--blue); font-size: 13px; font-weight: 650; }
+
+.footer { padding: 75px 0 30px; color: #cbd5e1; background: #0f172a; }
+.footer-message { margin: 0 0 12px; color: white; font-size: 31px; font-weight: 750; letter-spacing: -.045em; }
+.footer p:not(.footer-message) { font-size: 14px; }
+.footer-bottom { display: flex; justify-content: space-between; margin-top: 70px; padding-top: 25px; border-top: 1px solid #334155; color: #94a3b8; font-size: 12px; }
+
+@media (max-width: 850px) {
+  .hero { grid-template-columns: 1fr; min-height: auto; padding-top: 85px; padding-bottom: 65px; }
+  .hero-art { order: -1; max-width: 450px; margin: auto; }
+  .section-grid, .philosophy-followup { grid-template-columns: 1fr; gap: 12px; }
+  .section-body, .philosophy-followup .section-body { padding-top: 0; }
+  .philosophy-followup { margin-top: 60px; padding-top: 54px; }
+  .section { padding: 80px 0; }
+}
+
+@media (max-width: 600px) {
+  .container { width: calc(100% - 40px); }
+  .header-inner { flex-direction: column; align-items: flex-start; gap: 17px; min-height: 74px; padding: 20px 0; }
+  .site-header nav { flex-wrap: wrap; gap: 18px; }
+  .site-header nav a { font-size: 12px; }
+  .hero { gap: 20px; padding-top: 45px; }
+  .hero-art { max-width: 310px; }
+  .hero h1 { font-size: clamp(29px, 8vw, 41px); }
+  .lead { font-size: 17px; }
+  .hero-detail { font-size: 14px; }
+  .section { padding: 70px 0; }
+  .section h2 { margin-bottom: 26px; font-size: 29px; }
+  .section-body p, .about-intro, .founder p { font-size: 14px; }
+  .philosophy-followup h3 { font-size: 27px; }
+  .product-card { flex-direction: column; gap: 22px; padding: 24px; }
+  .product-icon { flex-basis: 70px; width: 70px; height: 70px; font-size: 42px; }
+  .product-heading h3 { font-size: 24px; }
+  .founder { grid-template-columns: 1fr; gap: 12px; }
+  .footer-message { font-size: 27px; }
+}
+
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
